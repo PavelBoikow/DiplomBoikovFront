@@ -1,0 +1,45 @@
+.admin{
+    width: 350px;
+    height: 180px;
+    box-shadow: 10px 30px 50px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+    background-color: white;
+    margin: 0 0 10px 0 ;
+}
+.adminDiv{
+    display: flex;
+    flex-direction: column;
+    
+}
+.admindivdown{
+    display: flex;
+    border-top: 2px solid #000;
+    width: 100%;
+    justify-content: space-between;
+}
+.admindivup{
+    margin: 0 15px 0 15px;
+    display: flex;
+    max-width: 320px;
+    width: 100%;
+    justify-content: space-between;
+}
+.pading{
+    margin: 0;
+    padding: 0;
+}
+.admindivupleft{
+    margin: 5px 0;
+}
+.admindivupright{
+    margin: 5px 0;
+}
+.admindivdownLeft{
+    width: 170px;
+    height: 130px;
+    margin: 5px 0 0 15px;
+    object-fit: cover;
+}
+.admindivdownRight{
+    margin: 5px 5px 10px 10px;
+}
