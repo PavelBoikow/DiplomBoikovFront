@@ -16,6 +16,11 @@
 В проекте используются следующие технологии и инструменты:
 
 - React
+- Redux Toolkit
+- React Hook Form
+- React Router
+- React Markdown / Simple Editor
+- Axios
 - HTML
 - CSS
 - JavaScript
