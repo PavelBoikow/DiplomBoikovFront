@@ -24,22 +24,15 @@
 ## Установка и запуск
 
 1. Клонируйте репозиторий на локальную машину:
-\```
-Bash
 
-git clone https://github.com/PavelBoikow/DiplomBoikov.git
-
-
+`git clone https://github.com/PavelBoikow/DiplomBoikov.git`
 
 2. Установите необходимые зависимости:
-\```
-Bash
+
 npm install
-\```
 
 4. Запустите приложение:
-\```
-Bash
+
 npm start
-\```
+
 Приложение будет доступно по адресу http://localhost:3000/.
