@@ -856,7 +856,13 @@ cursor: pointer;
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 1000px) {
+  .header_bottom_img{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
 
   .home_left_div_panl_box{
       margin: 15px 0 0 0 ;

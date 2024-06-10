@@ -28,13 +28,13 @@ function Header_bottom_html () {
                     </NavLink>
                     </li>
                 <li className="header_bottom_list_items">
-                    <NavLink to="/Events" className={({isActive}) => isActive ? activeLink : normaLink}>
+                    <NavLink to="/events" className={({isActive}) => isActive ? activeLink : normaLink}>
                     <h4>Мероприятия</h4>
                     </NavLink>
                     </li>
                 <li className="header_bottom_list_items">
                     <NavLink to="Student_associations" className={({isActive}) => isActive ? activeLink : normaLink}>
-                    <h4>Студенчиские объединения</h4>
+                    <h4>Студенческие объединения</h4>
                     </NavLink>
                     </li>
                 <li className="header_bottom_list_items">

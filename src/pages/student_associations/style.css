@@ -1,0 +1,30 @@
+.Studbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+.Studitem{
+    max-width: 750px;
+    width: 65%;
+}
+.StudButton{
+    position: absolute;
+    right: 10%;
+    color: white;
+    background-color: #4361EE;
+    padding: 5px 10px 5px 10px ;
+    border-radius: 7%;
+    border: none;
+    text-decoration: none;
+
+    
+}
+.text{
+    position: relative;
+}
+h2{
+    margin: 0;
+    padding: 0;
+}

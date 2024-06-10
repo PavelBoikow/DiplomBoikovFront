@@ -10,18 +10,13 @@ import CommentIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 
 import styles from './Post.module.scss';
 import { UserInfo } from '../UserInfo';
-import { PostSkeleton } from './Skeleton';
-import { fetchRemovePost } from '../../redux/slices/posts';
+import { StudSkeleton } from './Skeleton';
+import { fetchRemoveStud } from '../../redux/slices/stud';
 
-export const Post = ({
+export const Stud = ({
   id,
   title,
-  createdAt,
   imageUrl,
-  user,
-  viewsCount,
-  commentsCount,
-  tags,
   children,
   isFullPost,
   isLoading,
@@ -30,12 +25,12 @@ export const Post = ({
   const dispatch = useDispatch();
 
   if (isLoading) {
-    return <PostSkeleton />;
+    return <StudSkeleton />;
   }
 
   const onClickRemove = () => {
     if(window.confirm('Вы действительно хотите удалить статью?')){
-      dispatch(fetchRemovePost(id));
+      dispatch(fetchRemoveStud(id));
     }
   };
 
@@ -44,7 +39,7 @@ export const Post = ({
     <div className={clsx(styles.root, { [styles.rootFull]: isFullPost })}>
       {isEditable && (
         <div className={styles.editButtons}>
-          <Link to={`/posts/${id}/edit`}>
+          <Link to={`/Student_associations/${id}/edit`}>
             <IconButton color="primary">
               <EditIcon />
             </IconButton>
@@ -62,24 +57,12 @@ export const Post = ({
         />
       )}
       <div className={styles.wrapper}>
-        <UserInfo {...user} additionalText={createdAt.substr(0, 10)} />
         <div className={styles.indention}>
           <h2 className={clsx(styles.title, { [styles.titleFull]: isFullPost })}>
-            {isFullPost ? title : <Link to={`/posts/${id}`}>{title}</Link>}
+            {isFullPost ? title : <Link to={`/Student_associations/${id}`}>{title}</Link>}
           </h2>
-          <ul className={styles.tags}>
-            {tags.map((name) => (
-              <li key={name}>
-                <Link to={`/tag/${name}`}>#{name}</Link>
-              </li>
-            ))}
-          </ul>
           {children && <div className={styles.content}>{children}</div>}
           <ul className={styles.postDetails}>
-            <li>
-              <EyeIcon />
-              <span>{viewsCount}</span>
-            </li>
           </ul>
         </div>
       </div>

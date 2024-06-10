@@ -1,6 +1,8 @@
-import { useEffect } from "react";
+import React from "react";
+import { useDispatch , useSelector} from "react-redux";
 
-import EventHomebox from "../components/homeEvent/homeEvent";
+import {EventHome} from "../components/homeEvent/homeEvent";
+import { fetchPosts } from "../redux/slices/posts";
 
 import left from "./../jpg/Group 3.svg";
 import reght from "./../jpg/Group 4.svg";
@@ -11,13 +13,24 @@ import grupp from "./../jpg/Group 20.svg";
 import ellepse from "./../jpg/Ellipse 3.svg";
 
 
+
+
 function Home_start (){
-    let count = 0 
-    const on = "home_left_img"
-    const off = "home_left_img display_none"
-    const home_left_img_1 = "home_left_img"
-    const home_left_img_2 = "home_left_img display_none"
-    const home_left_img_3 = "home_left_img display_none"  
+    const dispatch = useDispatch();
+    let count = 0 ;
+    const on = "home_left_img";
+    const off = "home_left_img display_none";
+    const home_left_img_1 = "home_left_img";
+    const home_left_img_2 = "home_left_img display_none";
+    const home_left_img_3 = "home_left_img display_none"; 
+
+    const userData = useSelector((state) => state.auth.data);
+    const { post } = useSelector(state => state.posts);
+    const isPostsLoading = post.status === 'loading';
+
+    React.useEffect(() => {
+        dispatch(fetchPosts());
+    }, []);
 
     return(
         <>                      
@@ -46,11 +59,19 @@ function Home_start (){
                                 </div>
                             </div>
                             <div className="home_right">
-                                <div className="home_right_text"><h3>Ближайшие мероприятия:</h3></div>
+                                <div className="home_right_text"><h2>Последние изменения:</h2></div>
                                 <div className="">
-                                    <EventHomebox/>
-                                    <EventHomebox/>
-                                    <EventHomebox/>
+                                {
+                                (isPostsLoading ? [...Array(2)]:post.items.slice(0,2)).map((obj, index) => isPostsLoading ? (
+                                    <EventHome key = {index} isLoading={true}/>
+                                ) :  (
+                                    <EventHome
+                                    id={obj._id}
+                                    title={obj.title}
+                                    imageUrl={obj.imageUrl ? `http://localhost:4444${obj.imageUrl}`: ''}
+                                    />   
+                                    ),                              
+                                )}
                                 </div>
                             </div>
 

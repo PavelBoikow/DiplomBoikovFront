@@ -1,6 +1,5 @@
 .admin{
     width: 350px;
-    height: 180px;
     box-shadow: 10px 30px 50px 0px rgba(0, 0, 0, 0.05);
     border-radius: 30px;
     background-color: white;
@@ -15,7 +14,7 @@
     display: flex;
     border-top: 2px solid #000;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
 }
 .admindivup{
     margin: 0 15px 0 15px;
@@ -27,6 +26,7 @@
 .pading{
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 .admindivupleft{
     margin: 5px 0;
@@ -35,11 +35,12 @@
     margin: 5px 0;
 }
 .admindivdownLeft{
-    width: 170px;
-    height: 130px;
-    margin: 5px 0 0 15px;
+    width: 300px;
+    height: 200px;
+    margin: 5px 0 5px 0px;
     object-fit: cover;
 }
-.admindivdownRight{
-    margin: 5px 5px 10px 10px;
+.adminLink{
+    text-decoration: none;
+    color: black;
 }
