@@ -11,7 +11,9 @@ import { TagsBlock } from '../components/TagsBlock';
 import { fetchPosts, fetchPostsPop, fetchTags } from '../redux/slices/posts';
 
 export const Home = ({
-  tag = ''
+  status = 'new',
+  tag = '',
+  stat = 0
 }
 ) => {
   const dispatch = useDispatch();
@@ -21,40 +23,27 @@ export const Home = ({
   const isPostsLoading = post.status === 'loading';
   const isTagsLoading = tags.status === 'loading';
 
+  const tagInUrl = decodeURI(window.location.pathname.includes("tag") ? window.location.pathname.split("/").filter(Boolean).pop() : "");
 
   React.useEffect(() => {
-      dispatch(fetchPosts());     
+      status.includes('popularity')?  dispatch(fetchPostsPop()) :dispatch(fetchPosts());
       dispatch(fetchTags());
-  }, []);
+  }, [status , stat]);
   
-  if (tag != '') {
-   post.items = post.items.filter(isBigEnough)
-  }
-  function isBigEnough(value) {
-    var flag = new Boolean(false);
-    for (let i=0; i < value.length; i++){
-      if (value[0] == window.location.pathname.slice(6)){
-        flag = true
-      }
-    }
-    return flag;
-  }
-
+  console.log(tagInUrl)
   return (
     <>
-      <Tabs style={{ marginBottom: 15 }} value={0} aria-label="">
+      <Tabs style={{ marginBottom: 15 }} value={stat} aria-label="">
         <Link to = {"/events"}>
           <Tab label="Новые" />
-          
         </Link>
         <Link to = {"/events/popularity"}>
           <Tab label="Популярные" />
         </Link>
       </Tabs>
-      <p>{tag}</p>
       <Grid container spacing={4}>
         <Grid xs={8} item>
-          {(isPostsLoading ? [...Array(5)]:post.items).map((obj, index) => isPostsLoading ? (
+          {(isPostsLoading ? [...Array(5)] : tagInUrl ? post.items.filter((el) => el.tags.includes(tagInUrl)) : post.items).map((obj, index) => isPostsLoading ? (
             <Post key = {index} isLoading={true}/>
           ) : (
             <Post

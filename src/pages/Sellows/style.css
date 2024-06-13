@@ -1,0 +1,13 @@
+.infoButton{
+    position: absolute;
+    right: 10%;
+    color: white;
+    background-color: #4361EE;
+    padding: 5px 10px 5px 10px ;
+    border-radius: 5%;
+    border: none;
+    text-decoration: none;
+}
+.Infotext{
+    position: relative;
+}

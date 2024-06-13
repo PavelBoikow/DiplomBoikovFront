@@ -15,11 +15,12 @@ import ellepse from "./../jpg/Ellipse 3.svg";
 
 
 
-function Home_start (){
+export const Home_start = ({ind = 0}) =>{
     const dispatch = useDispatch();
     let count = 0 ;
     const on = "home_left_img";
     const off = "home_left_img display_none";
+    const img = ''
     const home_left_img_1 = "home_left_img";
     const home_left_img_2 = "home_left_img display_none";
     const home_left_img_3 = "home_left_img display_none"; 
@@ -28,9 +29,13 @@ function Home_start (){
     const { post } = useSelector(state => state.posts);
     const isPostsLoading = post.status === 'loading';
 
+    const onClickleft = () => {
+        ind==0?ind = 2: (ind == 1? ind = 0: (ind ==2? ind= 1: console.log("Error")));
+      };
+
     React.useEffect(() => {
         dispatch(fetchPosts());
-    }, []);
+    }, [ind]);
 
     return(
         <>                      
@@ -43,7 +48,7 @@ function Home_start (){
                                 <div><p className="home_left_t3">На этом сайте вы сможите ознакомиться с воспитательой работой на факультете ИАСТ.</p></div>
                                 <div className="home_left_div">
                                     <div className="home_click_left"> 
-                                        <button id="home_click_left" className="home_bottom_cl" ><img src={left} alt="left"/></button>          
+                                        <button id="home_click_left" onClick={onClickleft} className="home_bottom_cl" ><img src={left} alt="left"/></button>          
                                     </div>
                                     <div className="home_click_right"> 
                                         <button id="home_click_right" className="home_bottom_cl" ><img src={reght} alt="reght"/></button>
@@ -97,5 +102,4 @@ function Home_start (){
             </div> 
         </>
     );
-}
-export default Home_start;
+};

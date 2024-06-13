@@ -14,7 +14,6 @@ export const Student_associations = () => {
   const isAuth = useSelector(selectIsAuth);
   const isPostsLoading = stud.status === 'loading';
 
-  
   React.useEffect(() => {
       dispatch(fetchStud());
   }, []);
@@ -25,11 +24,10 @@ export const Student_associations = () => {
       <div className='Studbox text'>
         <h1 className=''>Студенческие объединения</h1>
         {isAuth ? <Link to = "/add-stud" className='StudButton'>
-          <div >
+          <div>
             <h2>Создать</h2>
           </div>
         </Link> : <></>}
-
       </div>     
             
       <div className='Studbox'>
