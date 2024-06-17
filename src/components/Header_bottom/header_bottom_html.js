@@ -1,6 +1,6 @@
-import fast from "./../../jpg/u6Lg.png";
+// import fast from "./../../jpg/u6Lg.png";
 import img from "./../../jpg/🦆 icon _hamburger menu_.svg";
-
+import fast from "./../../jpg/logo.svg";
 import { NavLink } from "react-router-dom";
 
 import "./style.css"

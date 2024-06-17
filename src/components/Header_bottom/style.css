@@ -28,7 +28,8 @@
   .header_bottom_list_div_img{
     display: flex;
     width: 10%;
-    justify-content: flex-start;
+    height: 80px;
+    flex-direction: column;
   }
   .header_bottom_list{
     display: flex;  
@@ -62,4 +63,7 @@
     background-color: #3A0CA3;
     padding: 15px 26px; 
   }
-  
+  .header_bottom_img{
+    margin: 20px 0 20px 0 ;
+    height: 100%;
+  }

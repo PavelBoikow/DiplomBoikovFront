@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 const instamce = axios.create({
-    baseURL: 'http://localhost:4444'
+    baseURL: process.env.REACT_APP_API_URL,
 });
 
 instamce.interceptors.request.use((config)=>{

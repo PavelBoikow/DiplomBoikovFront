@@ -30,7 +30,7 @@ export const FullStud = () => {
       <Stud
         id={data._id}
         title={data.title}
-        imageUrl={data.imageUrl ? `http://localhost:4444${data.imageUrl}` : ''}
+        imageUrl={data.imageUrl ? `process.env.REACT_APP_API_URL${data.imageUrl}` : ''}
         isFullPost
       >
         <ReactMarkdown children={data.text}/>
