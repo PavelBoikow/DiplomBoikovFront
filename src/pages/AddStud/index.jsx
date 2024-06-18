@@ -112,6 +112,7 @@ export const AddStud = () => {
             Удалить
           </Button>
           <img className={styles.image} src={`${process.env.REACT_APP_IMG}${imageUrl}`} alt="Uploaded" />
+          
         </>
       )}
       <br />
