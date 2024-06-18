@@ -30,7 +30,7 @@ export const FullStud = () => {
       <Stud
         id={data._id}
         title={data.title}
-        imageUrl={data.imageUrl ? `process.env.REACT_APP_API_URL${data.imageUrl}` : ''}
+        imageUrl={data.imageUrl ? `https://diplom-boikov-greenfoxlivetv.amvera.io${data.imageUrl}` : ''}
         isFullPost
       >
         <ReactMarkdown children={data.text}/>

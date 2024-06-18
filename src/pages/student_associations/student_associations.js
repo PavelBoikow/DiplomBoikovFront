@@ -38,7 +38,7 @@ export const Student_associations = () => {
               <Stud
                 id={obj._id}
                 title={obj.title}
-                imageUrl={obj.imageUrl ? `process.env.REACT_APP_API_URL${obj.imageUrl}`: ''}
+                imageUrl={obj.imageUrl ? `https://diplom-boikov-greenfoxlivetv.amvera.io${obj.imageUrl}`: ''}
                 isEditable={isAuth}
               />
             </div>
