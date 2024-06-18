@@ -49,7 +49,7 @@ export const Home = ({
             <Post
               id={obj._id}
               title={obj.title}
-              imageUrl={obj.imageUrl ? `https://diplom-boikov-greenfoxlivetv.amvera.io${obj.imageUrl}`: ''}
+              imageUrl={obj.imageUrl ? `${process.env.REACT_APP_IMG}${obj.imageUrl}`: ''}
               user={obj.user}
               createdAt={obj.createdAt}
               viewsCount={obj.viewsCount}

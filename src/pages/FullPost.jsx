@@ -31,7 +31,7 @@ export const FullPost = () => {
       <Post
         id={data._id}
         title={data.title}
-        imageUrl={data.imageUrl ? `https://diplom-boikov-greenfoxlivetv.amvera.io${data.imageUrl}` : ''}
+        imageUrl={data.imageUrl ? `${process.env.REACT_APP_IMG}${data.imageUrl}` : ''}
         user={data.user}
         createdAt={createdAtNu}
         viewsCount={data.viewsCount}

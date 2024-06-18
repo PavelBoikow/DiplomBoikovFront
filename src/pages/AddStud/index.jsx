@@ -111,7 +111,7 @@ export const AddStud = () => {
           <Button variant="contained" color="error" onClick={onClickRemoveImage}>
             Удалить
           </Button>
-          <img className={styles.image} src={`process.env.REACT_APP_API_URL${imageUrl}`} alt="Uploaded" />
+          <img className={styles.image} src={`${process.env.REACT_APP_IMG}${imageUrl}`} alt="Uploaded" />
         </>
       )}
       <br />
