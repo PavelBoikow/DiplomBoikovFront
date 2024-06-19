@@ -47,20 +47,7 @@ export const Home_start = ({ind = 0}) =>{
                                 <div><h1 className="home_left_t2">Воспитательная работа</h1></div>
                                 <div><p className="home_left_t3">На этом сайте вы сможите ознакомиться с воспитательой работой на факультете ИАСТ.</p></div>
                                 <div className="home_left_div">
-                                    <div className="home_click_left"> 
-                                        <button id="home_click_left" onClick={onClickleft} className="home_bottom_cl" ><img src={left} alt="left"/></button>          
-                                    </div>
-                                    <div className="home_click_right"> 
-                                        <button id="home_click_right" className="home_bottom_cl" ><img src={reght} alt="reght"/></button>
-                                    </div>
                                     <img id="home_left_img_1" className={home_left_img_1} src={img1} alt="home"/>
-                                    <img id="home_left_img_2" className={home_left_img_2} src={img2} alt="home"/>
-                                    <img id="home_left_img_3" className={home_left_img_3} src={img3} alt="home"/>
-                                </div>
-                                <div className="home_left_div_panl">
-                                    <div id="home_left_div_panl_1" className="home_left_div_panl_box home_left_div_panl_box_akt"></div>
-                                    <div id="home_left_div_panl_2" className="home_left_div_panl_box"></div>
-                                    <div id="home_left_div_panl_3" className="home_left_div_panl_box"></div>
                                 </div>
                             </div>
                             <div className="home_right">
