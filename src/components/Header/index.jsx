@@ -35,6 +35,9 @@ export const Header = () => {
                 <Button onClick={onClickLogout} variant="contained" color="error">
                   Выйти
                 </Button>
+                <Link to="/users">
+                  <Button variant="contained">Пользователи</Button>
+                </Link>
               </>
             ) : (
               <>
@@ -42,7 +45,7 @@ export const Header = () => {
                   <Button variant="outlined">Войти</Button>
                 </Link>
                 <Link to="/register">
-                  <Button variant="contained">Создать аккаунт</Button>
+                  <Button variant="contained">Регистрация</Button>
                 </Link>
               </>
             )}

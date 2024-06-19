@@ -20,6 +20,7 @@ export const fetchRegister = createAsyncThunk('posts/fetchRegister', async (para
 
 
 
+
 const initialState ={
    data: null,
    status: 'loading',

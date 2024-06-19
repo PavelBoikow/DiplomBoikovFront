@@ -9,4 +9,4 @@ export { Sellows } from "./Sellows/sellows";
 export { AddInfo } from "./AddInfo";
 export { Documentation } from "./documentation.js";
 export { Сontacts } from "./сontacts.js";
-
+export { Users } from "./users/Users.js";
