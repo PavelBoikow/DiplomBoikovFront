@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch , useSelector } from 'react-redux';
-import axios from "../../axios";
+import axios from "../../axios.js";
 import "./style.css"
 import { User } from '../../components/Users';
 import { selectIsAuth } from '../../redux/slices/auth';
@@ -22,7 +22,7 @@ export const Users = () => {
       alert('Ошибка при получении статьи')
     });
     
-  },[isLoading,data]);
+  },[isLoading]);
 
   if (isLoading) {
     return <User isLoading={isLoading} isFullPost/>;
