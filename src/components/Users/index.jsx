@@ -81,7 +81,7 @@ export const User = ({
         </p>
         <Button onClick={onClickAdm} variant="contained">Сделать администратором</Button>
         <p className={styles.Buttons}></p>
-        <Button onClick={onClickMod} variant="contained">Сделать модератором</Button>
+        <Button onClick={onClickMod} variant="contained">Сделать редактором</Button>
 
           {children && <div className={styles.content}>{children}</div>}
           <ul className={styles.postDetails}>

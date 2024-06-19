@@ -22,7 +22,7 @@ export const Users = () => {
       alert('Ошибка при получении статьи')
     });
     
-  },[isLoading, data]);
+  },[isLoading]);
 
   if (isLoading) {
     return <User isLoading={isLoading} isFullPost/>;
