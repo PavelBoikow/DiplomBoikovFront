@@ -32,10 +32,10 @@ export const User = ({
     }
   };
   const statadm = {
-    status:"2"
+    status: 2
   }
   const statmod = {
-    status:"1"
+    status: 1
   }
   const onClickAdm = () => {
     axios.patch(`/auth/${id}`, statadm)
